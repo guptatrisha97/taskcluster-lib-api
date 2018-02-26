@@ -750,6 +750,7 @@ var STABILITY_LEVELS = _.values(stability);
  * **Note** the handler may return a promise, if this promise fails we will
  * log the error and return an error message. If the promise is successful,
  * nothing happens.
+ * Also checks for duplicate definition of API method
  */
 API.prototype.declare = function(options, handler) {
   ['name', 'method', 'route', 'title', 'description'].forEach(function(key) {
